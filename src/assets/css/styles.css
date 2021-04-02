@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap');
+:root{
+    --Background: #FFB256;
+    --danger: #7A081A;
+    --button: #013D6C;
+    --button_hover: #0377A2;
+    --Montserrat: 'Montserrat';
+    --QuickSand: 'Quicksand';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--QuickSand);
+}
+
+/* --------------LOGIN------------- */
+.error_login{
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    background: var(--danger);
+    color: white;
+    padding: 5px;
+}
+    .error_login:empty{
+        background: none;
+    }
+.container_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+    .container{
+        display: flex;
+        background: #FFB256;
+        padding: 30px;
+        border-radius: 50px;
+    }
+    .logo{
+        margin: 25px 30px 0 0;
+        justify-content: center;
+        align-items: center;  
+        width: 25vh;     
+        height: 25vh; 
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .title_form{
+        font-size: 40px;
+    }
+    .form input{
+        width: 100%;
+        font-size: 20px;
+        outline: none;
+    }
+    .edit_txt{
+        background: inherit;
+        border-style: solid;
+        border-color: var(--Background) var(--Background) #000000 var(--Background) ;
+    }
+    .submit_button{
+        height: 30px;
+        border: none;
+        border-radius: 50px;
+        background:var(--button);
+        color: #ffffff;
+        cursor: pointer;
+        transition: .5s;
+    }
+        .submit_button:focus-within,.submit_button:hover{
+            transition: .5s;
+            background: var(--button_hover);
+        }
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .title_form{
+        font-size: 5vh;
+        text-align: center;
+    }
+    .container_form{
+        flex-direction: column;
+        padding: 90px;
+    }
+    .form input{
+    justify-content: space-between;
+    }
+    .logo{
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+        width: 35vh;     
+        height: 35vh;
+    }
+}
+/* ------------ MENÚ -------------- */
+
+.menu{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background: var(--Background);
+    font-family: var(--QuickSand);
+    color: #000000;
+}
+    .menu p{
+        margin: 0 100px 0 0;
+    }
+    .menu a{
+        text-decoration: none;
+        color: #ffffff;
+        margin: 0 0 0 100px;
+        padding: 3px 10px 3px 10px;
+        transition: 1s;
+    }
+    .menu a:hover{
+        background: var(--danger);
+        transition: .5s ;
+        border-radius: 5px;
+    }
+    .menu ul li{
+        list-style: none;
+        display: flex;
+    } 
+        .menu ul li a{
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0 10px 0 20px ;
+            padding: 3px 10px 3px 10px;
+            transition: 1s;
+        }
+        .menu ul li a:hover{
+            background: #ffffff;
+            color: #000000;
+            transition: .5s ;
+            border-radius: 5px;
+        }
+@media(max-width:768px){
+    .menu{
+        left: -100%;
+        transition: 1s;
+        width: 30%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .menu p{
+        margin: 0 0 50px 0;
+        
+    }
+    .menu a{
+        margin: 50px 0 0 0;
+        padding: 10px;
+    }
+    .menu ul li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .menu ul li a{
+        padding: 10px;
+        margin: 10px 0 0 0;
+    }
+    
+    .menu-responsive{
+        left: 0;
+        position: fixed;
+        width: 48%;
+        height: 100%;
+        background: var(--Background);
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+    }
+        /*------Hamburguer Menu-------*/
+        #hamburguer_menu{
+            width: 24px;
+            height: 18px;
+            position: fixed;
+            cursor: pointer;
+            top: 20px;
+            right: 20px;
+        }
+        #hamburguer_menu span{
+            position: absolute;
+            left: 0;
+            height: 2px;
+            width: 100%;    
+            opacity: 1;
+            background: #000000;
+            border-radius: 2px;
+            pointer-events:  none;    
+            transform: rotate(0deg);
+            transition: .2s ease;
+        }
+        #hamburguer_menu span:nth-child(1){
+            top: 0px;
+        }
+        #hamburguer_menu span:nth-child(2), 
+        #hamburguer_menu span:nth-child(3){
+            top: 50%;
+        }
+        #hamburguer_menu span:nth-child(4){
+            top: 100%;
+        }
+        #hamburguer_menu.open span:nth-child(1),
+        #hamburguer_menu.open span:nth-child(4) {
+            top: 50%;
+            width: 0%;
+            left: 50%;    
+        }
+        #hamburguer_menu.open span:nth-child(2){
+            transform: rotate(45deg);
+        }
+        #hamburguer_menu.open span:nth-child(3){
+            transform: rotate(-45deg);
+        }
+}
+
