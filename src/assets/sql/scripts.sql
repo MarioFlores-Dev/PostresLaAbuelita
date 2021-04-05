@@ -124,3 +124,32 @@ ENGINE = InnoDB
         ON DELETE NO ACTION
         ON UPDATE NO ACTION)
 ENGINE = InnoDB
+
+
+
+-- Apartado de producciones
+CREATE TABLE tbl_customers(
+	id INT AUTO_INCREMENT NOT null PRIMARY KEY,
+    nombre varchar (50),
+    apellido varchar(50),
+    numeroTelefono int,
+    direccion varchar(250)
+)
+
+CREATE TABLE tbl_products(
+	id INT AUTO_INCREMENT NOT null PRIMARY KEY,
+    nombre varchar (50),
+    precio float,
+)
+
+-- Tabla de ordenes
+CREATE TABLE tbl_orders(
+    id_order int PRIMARY key AUTO_INCREMENT,
+    id_customer int,
+    id_product int,
+    fechaEntrega DATETIME,
+    cantidad int,
+    monto   float,
+    FOREIGN key (id_customer) REFERENCES tbl_customers(id),
+    FOREIGN KEY (id_product) REFERENCES tbl_products(id)
+);

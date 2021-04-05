@@ -82,7 +82,7 @@ body{
             transition: .5s;
             background: var(--button_hover);
         }
-@media(max-width:768px){
+@media(max-width:1100px){
     .container{
         flex-direction: column;
         padding: 20px;
@@ -107,7 +107,6 @@ body{
     }
 }
 /* ------------ MENÚ -------------- */
-
 .menu{
     display: flex;
     position: fixed;
@@ -151,7 +150,7 @@ body{
             transition: .5s ;
             border-radius: 5px;
         }
-@media(max-width:768px){
+@media(max-width:1100px){
     .menu{
         left: -100%;
         transition: 1s;
