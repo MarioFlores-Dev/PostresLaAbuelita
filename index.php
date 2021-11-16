@@ -10,7 +10,6 @@
 </head>
 <body>
     <h1>Postres La Abuelita</h1>
-    <a href="http://docs.google.com/spreadsheets/u/6/d/1IsmEiTXoXZTheybvH3pZD939k-5TvetYvYL3jQDwm_U/edit?usp=drive_web&ouid=104924160262705984285" target="_blank">Verificar Presupuesto</a>
     <a href="src/app/login.php"><br><br>Sistema de gestión</a>
 </body>
 </html>
