@@ -1,0 +1,14 @@
+Pasos para continuar en el desarrollo del sistema:
+
+1. Tener Xampp ejecutandose con los servicios de MySQL y Apache
+2. Dentro de la carpeta htdocs (C:\xampp\htdocs)
+3. Abrir una consola de git en esa ruta (C:\xampp\htdocs)
+4. Escribir el comando: git clone https://github.com/MarioRamirez-dev/PostresLaAbuelita.git
+5. Una vez descargado, estaará dentro de la carpeta PostresLaAbuelita
+6. Entrar a la carpeta que se acaba de crear. (PostresLaAbuelita)
+7. Abrir una consola de git dentro de ella y ejecutar el comando:   code .
+8. Dentro de los archivos del sistema, entramos a src, luego assets, luego sql y dentro de la carpeta sql se encontrara un script sql
+   el cual cuenta con el codigo para crear la base de datos en phpmyadmin e igualmente la creacion de la tabla users
+9. Ejecutamos los scripts en phpmyadmin
+10. Creamos un usuario en la tabla (tbl_users)
+11. Ejecutar el sistema en el navegador bajo la ruta: localhtos/postreslaabuelita
